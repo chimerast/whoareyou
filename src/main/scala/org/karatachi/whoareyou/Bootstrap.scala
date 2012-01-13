@@ -1,12 +1,12 @@
 package org.karatachi.whoareyou
 
+import scala.Array.canBuildFrom
+import scala.io.Source
+
 import org.apache.commons.net.whois.WhoisClient
 
 object Bootstrap extends App {
-
-  val ipaddresses = Array("122.216.165.218", "122.216.165.218")
-
-  for (ipaddress <- ipaddresses) {
+  for (ipaddress <- Source.fromInputStream(System.in).getLines) {
     val whois = new WhoisClient()
     whois.connect("whois.nic.ad.jp")
     whois

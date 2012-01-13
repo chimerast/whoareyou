@@ -44,6 +44,14 @@
             <phase>compile</phase>
           </execution>
         </executions>
+        <configuration>
+          <launchers>
+            <launcher>
+              <id>whoareyou</id>
+              <mainClass>org.karatachi.whoareyou.Bootstrap</mainClass>
+            </launcher>
+          </launchers>
+        </configuration>
       </plugin>
     </plugins>
   </build>
